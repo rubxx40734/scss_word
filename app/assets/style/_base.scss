@@ -1,0 +1,59 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+.container{
+    max-width: 1320px; //24px gutter
+    padding: 0 12px;
+    margin: 0 auto;
+    @include pad() {
+      max-width: 768px;
+    }
+    @include phone() {
+        max-width: 569px;
+        padding: 0 12px;
+    }
+}
+.border{
+    border: 1px solid black;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-around{
+    justify-content: space-around;
+}
+.align-items-center{
+    align-items: center;
+}
+.mb-1{ //8px
+    margin-bottom: $spacers;
+}
+.mb-2{ //16px
+    margin-bottom: $spacers *2;
+}
+.mb-3{  //24px
+    margin-bottom: $spacers *3;
+}
+.mb-4{  //32px
+    margin-bottom: $spacers *4;
+}
+.mb-5{  //40px
+    margin-bottom: $spacers *5;
+}
+.mb-6{  //48px
+    margin-bottom: $spacers *6;
+}
+.mb-7{  //56px
+    margin-bottom: $spacers *7;
+}
+.mb-8{ //64px
+    margin-bottom: $spacers *8;
+}

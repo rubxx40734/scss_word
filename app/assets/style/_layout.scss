@@ -1,0 +1,174 @@
+.header{
+    background-color: $primary;
+    padding: 12px 0;
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    img{
+        width: 80px;
+        height: 48px;
+    }
+    .navList{
+        display: flex;
+        li{
+            margin-left: 64px;
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+        }
+        @include phone() {
+            display: none;
+        }
+    }
+    .phoneMenuBtn{
+        img{
+            border-radius: 5px;
+        }
+        display: none;
+        @include phone(){
+            display: block;
+        }
+    }
+}
+.phoneList{
+    height: 0px;
+    overflow: hidden;
+    transition-duration:1s; 
+    li{
+        text-align: center;
+        border-bottom: 1px solid white;
+        padding: 15px;
+        a{
+         color: white;
+         text-decoration: none;
+         font-size: 24px;
+         &:hover{
+             color: $secondary;
+         }
+        }
+     }
+}
+.showMenu{
+    height: 258px;
+    transition-duration:1s; 
+}
+
+.footer{
+    background-color: $primary;
+    padding-top: 80px;
+    padding-bottom: 32px;
+    .footerTop{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+        .phone{
+            display: none;
+            @include phone() {
+                display: block;
+                .content1{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 24px;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .txtmenu{
+            display: flex;
+            li{
+                margin-right: 48px;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            @include phone() {
+                display: none;
+            }
+        }
+        .imgmenu{
+            display: flex;
+            li{
+                margin-left: 32px;
+                img{
+                    height: 48px;
+                    width: 48px;
+                    @include phone() {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .footerCenter{
+        padding-bottom: 32px;
+        border-bottom: 1px solid white;
+        margin-bottom: 24px;
+        @include phone() {
+            display: none;
+        }
+        .content1{
+            display: flex;
+            align-items: center;
+            img{
+                width: 36px;
+                height: 36px;
+                margin-right: 24px;
+            }
+            p{
+                font-size: 36px;
+                color: white;
+            }
+        }
+    }
+    .footerBottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include phone() {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h4{
+            color: white;
+            @include phone() {
+                margin-bottom: 12px;
+            }
+        }
+        .terms{
+            display: flex;
+            align-items: center;
+            @include phone() {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            li{
+                margin-left: 48px;
+                @include phone() {
+                    margin-left: 0px;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

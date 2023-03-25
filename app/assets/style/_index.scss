@@ -1,0 +1,289 @@
+.banner{
+    height: 787px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-position:  center;
+    background-size: cover;
+    position: relative;
+    @include pad() {
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+    }
+    .container{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        .text-end{
+            text-align: end;
+            p{
+                font-size: 36px;
+                color: $secondary;
+                @include phone() {
+                    font-size: 16px;
+                }
+            }
+            h1{
+                font-size: 64px;
+                color: $secondary;
+                font-weight: 900;
+                @include phone() {
+                    font-size: 24px;
+                }
+            }
+            button{
+                border: 0;
+                border-radius: 5px;
+                background-color: $primary;
+                color: white;
+                padding: 10px 20px;
+            }
+        }
+    }
+} 
+.mainMajor{
+    background-color: $info;
+    .majorBox{
+        padding: 80px 0;
+        h2{
+            color: $secondary;
+            font-size: 48px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 36px;
+            @include phone() {
+                font-size: 24px;
+            }
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                width: 22%;
+                @include pad() {
+                    width: 47%;
+                }
+                text-align: center;
+                padding: 0 10px;
+                @include phone() {
+                    width: 99%;
+                    margin-bottom: 32px;
+                }
+                img{
+                    width: 83px;
+                    height: 83px;
+                    margin-bottom: 24px;
+                }
+                .major{
+                    margin-bottom: 8px;
+                    color: $secondary;
+                    font-style: 24px;
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+}
+.classic{
+    margin-top: 80px;
+    h2{
+        color: $secondary;
+        font-size: 48px;
+        margin-bottom: 48px;
+        font-weight: 700;
+        text-align: center;
+        @include phone() {
+            font-size: 24px;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        @include pad() {
+            flex-direction: column;
+            align-items: center;
+
+        }
+        li{
+            text-align: center;
+            width: 33%;
+            @include pad{
+                width: 336px;
+            }
+            @include phone() {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+            img{
+                margin-bottom: 8px;
+                height: 416px;
+                @include phone() {
+                    width: 100%;
+                    height: 348px;
+                }
+            }
+            h3{
+                color: $primary;
+                font-size: 48px;
+                font-weight: 700;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.jointName{
+    margin-top: 80px;
+    background-image: url(../images/index-bg.png);
+    background-size: cover;
+    @include pad() {
+        background-image: url(../images/index-bg-md.png);
+    }
+    padding: 80px 0;
+    h2{
+        text-align: center;
+        font-size: 48px;
+        color: white;
+        margin-bottom: 48px;
+        @include phone() {
+            font-size: 24px;
+        }
+    }
+    ul{
+        display: flex;
+        @include pad() {
+            flex-direction: column;
+        }
+        li{
+            width: 50%;
+            @include pad() {
+                width: 99%;
+                margin-bottom: 24px;
+            }
+            .backImg1{
+                background-image: url(../images/home-section4-1.png);
+                background-size: cover;
+                @include phone() {
+                    background-image: url(../images/home-section4-1-sm.png);
+                }
+                height: 240px;
+            }
+            .backImg2{
+                background-image: url(../images/home-section4-2.png);
+                background-size: cover;
+                @include phone() {
+                    background-image: url(../images/home-section4-2-sm.png);
+                }
+                height: 240px;
+            }
+            .jointText{
+                background-color: white;
+                text-align: center;
+                h3{
+                    color: $primary;
+                    font-size: 48px;
+                    font-style: italic;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.customer{
+    margin-top: 80px;
+    h2{
+        text-align: center;
+        color: $secondary;
+        font-size: 48px;
+        margin-bottom: 24px;
+        @include phone() {
+            font-size: 24px;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            width: 24%;
+            @include pad() {
+                width: 49%;
+                margin-bottom: 24px;
+            }
+            @include phone() {
+                width: 99%;
+            }
+            border: 1px solid #DEE2E6;
+            border-radius: 3px;
+            height: 511px;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 100%;
+                height: 306px;
+            }
+            .customerTxt{
+                padding:  16px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.connection{
+    background-color: $info;
+    margin-top: 80px;
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .message{
+        width: 636px;
+        @include pad() {
+            width: 576px;
+        }
+        @include phone() {
+            width: 99%;
+        }
+        h2{
+            margin-top: 80px;
+            margin-bottom: 48px;
+            color: $secondary;
+            font-size: 48px;
+            text-align: center;
+            font-weight: 700;
+        }
+        h3{
+            margin-bottom: 24px;
+        }
+        .inputeStyle{
+            margin-bottom: 16px;
+            width: 97%;
+            background-color: $info;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .btn{
+            text-align: center;
+            margin-bottom: 80px;
+            margin-top: 48px;
+            button{
+                padding: 16px 176px;
+                color: white;
+                background-color: $primary;
+                border: none;
+                &:hover{
+                    background-color: $secondary;
+                }
+                @include phone() {
+                    width: 100%;
+                    padding: 16px 0px;
+                }
+            }
+        }
+    }
+}

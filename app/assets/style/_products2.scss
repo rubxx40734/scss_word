@@ -1,0 +1,9 @@
+.productList .widthSet{
+   width: 31.5%;
+   @include pad() {
+    width: 48%;
+   }
+   @include phone() {
+    width: 98%;
+   }
+}

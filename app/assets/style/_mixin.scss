@@ -1,0 +1,13 @@
+// 平板版本
+@mixin pad{
+    @media(max-width: 992px) {
+      @content
+    }
+}
+// 手機版本
+@mixin phone{
+    @media(max-width: 768px) {
+      @content
+    }
+}
+
